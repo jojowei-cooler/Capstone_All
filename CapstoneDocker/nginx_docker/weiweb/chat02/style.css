@@ -1,0 +1,28 @@
+*                               { margin: 0; padding: 0; }
+body                            { font: 12px "Lucida Grande" Sans-Serif;  }
+h2                              { color: #0066FF; font: 30px Helvetica, Sans-Serif; margin: 0 0 10px 0; }
+#page-wrap                      { width: 500px; margin: 30px auto; position: relative; }
+
+#chat-wrap                      { border: 1px solid #eee; margin: 0 0 15px 0; }
+#chat-area                      { height: 500px; overflow: auto; border: 1px solid #666; padding: 20px; background: white; }
+#chat-area span                 { color: white; background: #333; padding: 4px 8px; -moz-border-radius: 5px; -webkit-border-radius: 8px; margin: 0 5px 0 0; }
+#chat-area p                    { padding: 8px 0; border-bottom: 1px solid #ccc; }
+
+#name-area                      { position: absolute; top: 12px; right: 0; color: white; font: bold 12px "Lucida Grande", Sans-Serif; text-align: right; }
+#name-area span                 { color: #fa9f00; }
+
+#send-message-area p            { float: right; color: white; padding-top: 27px; font-size: 14px;  }
+#sendie                         { border: 3px solid #999; width: 340px; padding: 8px; font: 12px "Lucida Grande", Sans-Serif; float: left;  margin: 3px; }
+
+input {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  margin: 3px;
+}

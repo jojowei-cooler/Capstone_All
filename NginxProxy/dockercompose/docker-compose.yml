@@ -1,0 +1,39 @@
+version: '3.3'
+services:
+  weiproxy:
+    image:
+      weiproxy:weiproxy
+    ports:
+      - 80:80
+      - 443:443
+    container_name: weiproxy
+    extra_hosts:
+      - "web1.dtask.idv.tw:172.22.0.101"
+      - "web2.dtask.idv.tw:172.22.0.102"
+    networks:
+      proxy_net:
+        ipv4_address: 172.22.0.100
+  proxy_web1:
+    image:
+      weiproxy:web1
+    ports:
+      - 500:80
+    container_name: proxy_web1
+    networks:
+      proxy_net:
+        ipv4_address: 172.22.0.101
+  proxy_web2:
+    image:
+      weiproxy:web2
+    ports:
+      - 600:80
+    container_name: proxy_web2
+    networks:
+      proxy_net:
+        ipv4_address: 172.22.0.102
+networks:
+  proxy_net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.22.0.0/16
