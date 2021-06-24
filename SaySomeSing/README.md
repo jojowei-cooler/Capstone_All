@@ -18,3 +18,5 @@
 - chat with others via text in chat room
 - donate the index of object
 - listen the song and sing
+## Note
+must get the SSL key from signaling server first (enter URL at browser)
