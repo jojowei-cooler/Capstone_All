@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link rel="stylesheet" href="../style.css"> -->
+        <link rel="stylesheet" href="../homestyle.css" type="text/css" />
+    </head>
+    <body>
+        
+            <div>
+                <input placeholder="Enter username..."
+                        type="text"
+                        id="username-input" /><br>
+                <button onclick="joinCall()">Join Call</button>
+            </div>
+            <div class="col">
+                <select id="filter" class="select">
+                    <option value="none">Normal</option>
+                    <option value="grayscale(100%)">Grayscale</option>
+                    <option value="sepia(100%)">Sepia</option>
+                    <option value="invert(100%)">Invert</option>
+                    <option value="hue-rotate(90deg)">Hue</option>
+                    <option value="blur(10px)">Blur</option>
+                    <option value="contrast(200%)">Contrast</option>
+                </select>
+            </div>
+            <div id="video-call-div">
+                <div style="width:48%; height: auto; float: left;">
+                    <video muted id="local-video" autoplay controls width="100%" height="auto"></video>
+                </div>
+                <div style="width: 48%; height: auto; float: right;">
+                    <video id="remote-video" autoplay controls width="100%" height="auto"></video>
+                </div>                
+                <div class="call-action-div">
+                    <button onclick="muteVideo()">Mute Video</button>
+                    <button onclick="muteAudio()">Mute Audio</button>
+                </div>
+            </div>
+            
+             
+        <script src="./receiver.js"></script>
+    </body>
+
+</html>

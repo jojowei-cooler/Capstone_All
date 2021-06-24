@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="../homestyle.css" type="text/css" />
+    </head>
+    <body>
+
+        <div>
+            <input placeholder="Enter username..."
+                    type="text"
+                    id="username-input" /><br>
+            <button onclick="sendUsername()">Send</button>
+            <button onclick="startCall()">Start Call</button>
+        </div>
+        <div class="col">
+            <select id="filter" class="w-100 bg-dark text-light ml-2 mt-2 select font-weight-bold border">
+                <option value="none">Normal</option>
+                <option value="grayscale(100%)">Grayscale</option>
+                <option value="sepia(100%)">Sepia</option>
+                <option value="invert(100%)">Invert</option>
+                <option value="hue-rotate(90deg)">Hue</option>
+                <option value="blur(10px)">Blur</option>
+                <option value="contrast(200%)">Contrast</option>
+            </select>
+        </div>
+        <div id="video-call-div">
+            <div style="width:48%; height: auto; float: left;">
+                <video muted id="local-video" autoplay controls width="100%" height="auto"></video>
+            </div>
+            <div style="width: 48%; height: auto; float: right;">
+                <video id="remote-video" autoplay controls width="100%" height="auto"></video>
+            </div>                
+            <div class="call-action-div">
+                <button onclick="muteVideo()">Mute Video</button>
+                <button onclick="muteAudio()">Mute Audio</button>
+            </div>
+        </div>
+
+        <script src="./sender.js"></script>
+
+    </body>
+
+</html>

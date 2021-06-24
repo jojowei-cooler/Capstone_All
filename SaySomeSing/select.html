@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./homestyle.css" type="text/css" />
+    <style>
+      input{
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 32px;
+        border-radius: 20px;
+      }
+      #selecters {
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Please select your identity:</h1>
+    <br>
+    <div id="selecters">
+      <div class="" style=" width:30%; height:100%;float:left;">
+        <form action="./sender/sender.html">
+          <input type="submit" value="Sender" />
+        </form>
+      </div>
+      <div class="" style=" width:30%; height:100%;float:left;">
+        <form action="./receiver/receiver.html" >
+          <input type="submit" value="Receiver"  />
+        </form>
+      </div>
+      <div class="" style=" width:30%; height:100%;float:left;">
+        <form action="http://192.168.43.114:2500">
+          <input type="submit" value="Live" />
+        </form>
+        <a href="http://192.168.43.114:2500">live to here</a>
+      </div>
+    </div>
+  </body>
+</html>
